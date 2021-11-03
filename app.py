@@ -66,6 +66,7 @@ def evaluate():
             param_intfc = param_intfc.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
             param_intfc = param_intfc.replace("REQUEST_REPLACE", str(data))
     # ------------------- STANDARD INTERFACE CREATION ------------------------
+    # relies on standard converter which uses types based on html form types. Label is the header, description ishelp text, options are possible choices, defaults are what it starts off as, and restrictiosn are any further parameters to add (again based on html form type parameters)
     if not own_interface and needs_interface:
         param_intfc = []
         param_intfc.append({'type':'text', 'label':'variable 1', 'description':'This is variable 1 a text input', 'options':[], 'default':['default text'], 'restrictions':{}})
@@ -139,6 +140,7 @@ def run():
                 run_intfc = run_intfc.replace("PARAMETERS_REPLACE", str(eval_params))
 
         # ------------------- STANDARD INTERFACE CREATION ------------------------
+	# relies on standard converter which uses types based on html form types. Label is the header, description ishelp text, options are possible choices, defaults are what it starts off as, and restrictiosn are any further parameters to add (again based on html form type parameters)
         if not own_interface and needs_interface:
             run_intfc = []
             run_intfc.append({'type':'text', 'label':'variable 1', 'description':'This is variable 1 a text input', 'options':[], 'default':['default text'], 'restrictions':{}})
