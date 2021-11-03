@@ -47,7 +47,7 @@ def evaluate():
     own_interface = False
 
     # ------------------------ NO INTERFACE ------------------------
-    if not own_interface:
+    if not needs_interface:
         param_intfc = []
     # -------------------- OWN INTERFACE CREATION ------------------------
     # example of interface creation
@@ -117,7 +117,7 @@ def run():
         own_interface = True
 
             # ------------------------ NO INTERFACE ------------------------
-        if not own_interface:
+        if not needs_interface:
             run_intfc = []
 
         # -------------------- OWN INTERFACE CREATION ------------------------
