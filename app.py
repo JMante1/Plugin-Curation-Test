@@ -60,7 +60,7 @@ def evaluate():
 
             # put in the url, uri, and instance given by synbiohub
             param_intfc = param_intfc.replace("INSTANCE_REPLACE", instance_url)
-            param_intfc = param_intfc.replace("SIZE_REPLACE", size)
+            param_intfc = param_intfc.replace("SIZE_REPLACE", str(size))
             param_intfc = param_intfc.replace("URI_REPLACE", top_level_url)
             param_intfc = param_intfc.replace("RDFTYPE_REPLACE", rdf_type)
             param_intfc = param_intfc.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
@@ -130,7 +130,7 @@ def run():
                 run_intfc = htmlfile.read()
 
                 # put in the url, uri, and instance given by synbiohub
-                run_intfc = run_intfc.replace("SIZE_REPLACE", size)
+                run_intfc = run_intfc.replace("SIZE_REPLACE", str(size))
                 run_intfc = run_intfc.replace("URI_REPLACE", top_level_url)
                 run_intfc = run_intfc.replace("RDFTYPE_REPLACE", rdf_type)
                 run_intfc = run_intfc.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
@@ -193,7 +193,7 @@ def save():
             result = xmlfile.read()
 
         # put in the url, filename, and instance given by synbiohub  
-        result = result.replace("SIZE_REPLACE", size)
+        result = result.replace("SIZE_REPLACE", str(size))
         result = result.replace("URI_REPLACE", top_level_url)
         result = result.replace("RDFTYPE_REPLACE", rdf_type)
         result = result.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
