@@ -47,8 +47,8 @@ for variable in json_dict:
                 def_str = ' checked="checked"'
             else:
                 def_str = ''
-            html += f'<input type="{type}" id="{id}_{ind}" value="{id}_{ind}" name="{id}"{def_str}>\n'
-            html += f'<label for="{id}_{ind}">{val}</label><br>\n'
+            html += f'<input type="{type}" id="{val}" value="{val}" name="{id}"{def_str}>\n'
+            html += f'<label for="{val}">{val}</label><br>\n'
 
 html += html_end
 

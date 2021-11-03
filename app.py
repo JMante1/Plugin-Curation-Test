@@ -101,7 +101,7 @@ def run():
     data = request.get_json(force=True)
 
     submit_link = data['submit_link']
-    params = data['parameters']
+    eval_params = data['eval_parameters']
     top_level_url = data['top_level']
     # complete_sbol = data['complete_sbol']
     instance_url = data['instanceUrl']
@@ -136,7 +136,7 @@ def run():
                 run_intfc = run_intfc.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
                 run_intfc = run_intfc.replace("INSTANCE_REPLACE", instance_url)
                 run_intfc = run_intfc.replace("REQUEST_REPLACE", str(data))
-                run_intfc = run_intfc.replace("PARAMETERS_REPLACE", str(params))
+                run_intfc = run_intfc.replace("PARAMETERS_REPLACE", str(eval_params))
 
         # ------------------- STANDARD INTERFACE CREATION ------------------------
         if not own_interface and needs_interface:
@@ -174,7 +174,8 @@ def run():
 def save():
     data = request.get_json(force=True)
 
-    params = data['parameters']
+    eval_params = data['eval_parameters']
+    run_params = data['run_parameters']
     top_level_url = data['top_level']
     # complete_sbol = data['complete_sbol']
     instance_url = data['instanceUrl']
@@ -198,7 +199,8 @@ def save():
         result = result.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
         result = result.replace("INSTANCE_REPLACE", instance_url)
         result = result.replace("REQUEST_REPLACE", str(data))
-        updated_sbol = result.replace("PARAMETERS_REPLACE", str(params))
+        updated_sbol = result.replace("EVAL_PARAMETERS_REPLACE", str(eval_params))
+		updated_sbol = result.replace("RUN_PARAMETERS_REPLACE", str(run_params))
         # ~~~~~~~~~~~~~~~~~~~~ END SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         return updated_sbol
