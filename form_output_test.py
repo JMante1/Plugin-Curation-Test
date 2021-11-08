@@ -9,6 +9,7 @@ app = Flask(__name__)
 def status():
     return("The Form Output Server is up and running")
 
+
 @app.route("/form_output", methods=["POST"])
 def form_output():
     data = request.form

@@ -33,7 +33,6 @@ for variable in json_dict:
         for val in restrictions:
             rest_str += f' {val}="{restrictions[val]}"'
 
-
     if len(options) == 0:
         if len(default) > 0:
             def_str = f' value="{default[0]}"'
