@@ -9,7 +9,9 @@
         Size sent: SIZE_REPLACE
         RDF Type sent: RDFTYPE_REPLACE
         Shallow SBOL sent: SHALLOWSBOL_REPLACE
+        Complete SBOL sent: COMPLETESBOL_REPLACE
         Instance sent: INSTANCE_REPLACE
+        Genbank sent: GENBANK_REPLACE
 
         Parameters sent: PARAMETERS_REPLACE
 

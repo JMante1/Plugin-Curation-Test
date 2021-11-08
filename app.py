@@ -114,7 +114,7 @@ def run():
     shallow_sbol = data['shallow_sbol']
 
     try:
-        # ~~~~~~~~~~~~ REPLACE THIS SECTION WITH OWN RUN CODE ~~~~~~~~~~~~~~~~~~~
+        # ~~~~~~~~~~~~ REPLACE THIS SECTION WITH OWN RUN CODE ~~~~~~~~~~~~~~~~
         # ------------------------ INTERFACE CREATION ------------------------
         # indicates the format of the interface in the response
         needs_interface = True
@@ -144,8 +144,12 @@ def run():
                 run_intfc = run_intfc.replace("GENBANK_REPLACE", genbank_url)
                 run_intfc = run_intfc.replace("PARAMETERS_REPLACE", str(eval_params))
 
-        # ------------------- STANDARD INTERFACE CREATION ------------------------
-        # relies on standard converter which uses types based on html form types. Label is the header, description ishelp text, options are possible choices, defaults are what it starts off as, and restrictiosn are any further parameters to add (again based on html form type parameters)
+        # ------------------- STANDARD INTERFACE CREATION ---------------------
+        # relies on standard converter which uses types based on html form
+        # types. Label is the header, description ishelp text, options are
+        # possible choices, defaults are what it starts off as, and
+        # restrictiosn are any further parameters to add (again based on
+        # html form type parameters)
         if not own_interface and needs_interface:
             run_intfc = []
             run_intfc.append({'type': 'text', 'label': 'variable 1', 'description': 'This is variable 1 a text input', 'options': [], 'default': ['default text'], 'restrictions': {}})
@@ -165,7 +169,7 @@ def run():
             run_intfc.append({'type': 'time', 'label': 'variable 15', 'description': 'This is variable 15 a time input', 'options': [], 'default': ['16:30'], 'restrictions': {}})
             run_intfc.append({'type': 'url', 'label': 'variable 16', 'description': 'This is variable 16 a url input', 'options': [], 'default': ['http://www.awesome.com'], 'restrictions': {}})
             run_intfc.append({'type': 'week', 'label': 'variable 17', 'description': 'This is variable 17 a week input', 'options': [], 'default': ['2011-W20'], 'restrictions': {}})
-        # ~~~~~~~~~~~~~~~~~~~~~~~~~~ END SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        # ~~~~~~~~~~~~~~~~~~~~~~~~~~ END SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if needs_interface:
             response = {'needs_interface': needs_interface,
                         'own_interface': own_interface,
@@ -185,7 +189,8 @@ def save():
     eval_params = data['eval_parameters']
     run_params = data['run_parameters']
     top_level_url = data['top_level']
-    # complete_sbol = data['complete_sbol']
+    complete_sbol = data['complete_sbol']
+    genbank_url = data['genbank']
     instance_url = data['instanceUrl']
     size = data['size']
     rdf_type = data['type']
@@ -205,7 +210,9 @@ def save():
         result = result.replace("URI_REPLACE", top_level_url)
         result = result.replace("RDFTYPE_REPLACE", rdf_type)
         result = result.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
+        result = result.replace("COMPLETESBOL_REPLACE", complete_sbol)
         result = result.replace("INSTANCE_REPLACE", instance_url)
+        result = result.replace("GENBANK_REPLACE", genbank_url)
         result = result.replace("REQUEST_REPLACE", str(data))
         updated_sbol = result.replace("EVAL_PARAMETERS_REPLACE", str(eval_params))
         updated_sbol = result.replace("RUN_PARAMETERS_REPLACE", str(run_params))

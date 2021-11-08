@@ -1,0 +1,183 @@
+{
+    "interface": [
+        {
+            "default": [
+                "default text"
+            ],
+            "description": "This is variable 1 a text input",
+            "label": "variable 1",
+            "options": [],
+            "restrictions": {},
+            "type": "text"
+        },
+        {
+            "default": [
+                "option 1"
+            ],
+            "description": "This is variable 2 a radio input",
+            "label": "variable 2",
+            "options": [
+                "option 1",
+                "option 2",
+                "option 3"
+            ],
+            "restrictions": {},
+            "type": "radio"
+        },
+        {
+            "default": [
+                "option 1",
+                "option 2"
+            ],
+            "description": "This is variable 3 a checkbox input",
+            "label": "variable 3",
+            "options": [
+                "option 1",
+                "option 2",
+                "option 3"
+            ],
+            "restrictions": {},
+            "type": "checkbox"
+        },
+        {
+            "default": [],
+            "description": "This is variable 4 a password input",
+            "label": "variable 4",
+            "options": [],
+            "restrictions": {},
+            "type": "password"
+        },
+        {
+            "default": [],
+            "description": "This is variable 5 a reset button so all values return to default",
+            "label": "variable 5",
+            "options": [],
+            "restrictions": {},
+            "type": "reset"
+        },
+        {
+            "default": [
+                "#ffffff"
+            ],
+            "description": "This is variable 6 a colour input",
+            "label": "variable 6",
+            "options": [],
+            "restrictions": {},
+            "type": "color"
+        },
+        {
+            "default": [
+                "2001-11-11"
+            ],
+            "description": "This is variable 7 a date input",
+            "label": "variable 7",
+            "options": [],
+            "restrictions": {
+                "max": "2020-01-01",
+                "min": "2000-01-01"
+            },
+            "type": "date"
+        },
+        {
+            "default": [
+                "2001-11-11"
+            ],
+            "description": "This is variable 8 a date-time-local input",
+            "label": "variable 8",
+            "options": [],
+            "restrictions": {},
+            "type": "date"
+        },
+        {
+            "default": [
+                "test@gmail.com"
+            ],
+            "description": "This is variable 9 an email input",
+            "label": "variable 9",
+            "options": [],
+            "restrictions": {},
+            "type": "email"
+        },
+        {
+            "default": [],
+            "description": "This is variable 10 a file input",
+            "label": "variable 10",
+            "options": [],
+            "restrictions": {},
+            "type": "file"
+        },
+        {
+            "default": [
+                "2020-07"
+            ],
+            "description": "This is variable 11 a month input",
+            "label": "variable 11",
+            "options": [],
+            "restrictions": {},
+            "type": "month"
+        },
+        {
+            "default": [
+                7.89
+            ],
+            "description": "This is variable 12 a number input",
+            "label": "variable 12",
+            "options": [],
+            "restrictions": {},
+            "type": "number"
+        },
+        {
+            "default": [],
+            "description": "This is variable 13 a range input",
+            "label": "variable 13",
+            "options": [],
+            "restrictions": {},
+            "type": "range"
+        },
+        {
+            "default": [
+                "888-88-888"
+            ],
+            "description": "This is variable 14 a tel input",
+            "label": "variable 14",
+            "options": [],
+            "restrictions": {
+                "pattern": "[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            },
+            "type": "tel"
+        },
+        {
+            "default": [
+                "16:30"
+            ],
+            "description": "This is variable 15 a time input",
+            "label": "variable 15",
+            "options": [],
+            "restrictions": {},
+            "type": "time"
+        },
+        {
+            "default": [
+                "http://www.awesome.com"
+            ],
+            "description": "This is variable 16 a url input",
+            "label": "variable 16",
+            "options": [],
+            "restrictions": {},
+            "type": "url"
+        },
+        {
+            "default": [
+                "2011-W20"
+            ],
+            "description": "This is variable 17 a week input",
+            "label": "variable 17",
+            "options": [],
+            "restrictions": {},
+            "type": "week"
+        }
+    ],
+    "needs_interface": true,
+    "own_interface": false,
+    "submit_link": "http://localhost:5000/form_output"
+}
