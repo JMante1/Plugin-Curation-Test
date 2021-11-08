@@ -64,6 +64,8 @@ def evaluate():
             param_intfc = param_intfc.replace("URI_REPLACE", top_level_url)
             param_intfc = param_intfc.replace("RDFTYPE_REPLACE", rdf_type)
             param_intfc = param_intfc.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
+            param_intfc = param_intfc.replace("COMPLETESBOL_REPLACE", complete_sbol)
+            param_intfc = param_intfc.replace("GENBANK_REPLACE", genbank_url)
             param_intfc = param_intfc.replace("REQUEST_REPLACE", str(data))
     # ------------------- STANDARD INTERFACE CREATION ------------------------
     # relies on standard converter which uses types based on html form types. Label is the header, description ishelp text, options are possible choices, defaults are what it starts off as, and restrictiosn are any further parameters to add (again based on html form type parameters)
@@ -104,7 +106,8 @@ def run():
     submit_link = data['submit_link']
     eval_params = data['eval_parameters']
     top_level_url = data['top_level']
-    # complete_sbol = data['complete_sbol']
+    complete_sbol = data['complete_sbol']
+    genbank_url = data['genbank']
     instance_url = data['instanceUrl']
     size = data['size']
     rdf_type = data['type']
@@ -135,8 +138,10 @@ def run():
                 run_intfc = run_intfc.replace("URI_REPLACE", top_level_url)
                 run_intfc = run_intfc.replace("RDFTYPE_REPLACE", rdf_type)
                 run_intfc = run_intfc.replace("SHALLOWSBOL_REPLACE", shallow_sbol)
+                run_intfc = run_intfc.replace("COMPLETESBOL_REPLACE", complete_sbol)
                 run_intfc = run_intfc.replace("INSTANCE_REPLACE", instance_url)
                 run_intfc = run_intfc.replace("REQUEST_REPLACE", str(data))
+                run_intfc = run_intfc.replace("GENBANK_REPLACE", genbank_url)
                 run_intfc = run_intfc.replace("PARAMETERS_REPLACE", str(eval_params))
 
         # ------------------- STANDARD INTERFACE CREATION ------------------------
