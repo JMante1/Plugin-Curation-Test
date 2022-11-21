@@ -118,7 +118,7 @@ def run():
         # ------------------------ INTERFACE CREATION ------------------------
         # indicates the format of the interface in the response
         needs_interface = True
-        own_interface = True
+        own_interface = False
 
         # ------------------------ NO INTERFACE ------------------------
         if not needs_interface:
